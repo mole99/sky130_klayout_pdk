@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright TODO
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+-->
+
+<klayout-macro>
+ <description>Import Netlist</description>
+ <version/>
+ <category>layout_helper</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>true</show-in-menu>
+ <group-name/>
+ <menu-path>macros_menu.examples>end("Examples").end</menu-path>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>
+
+import pya
+
+print('Hello!')
+
+path = pya.FileDialog.ask_open_file_name("Choose your file.", '.', "GDS2 (*.gds)")
+
+print(path)
+
+def createPCellInstance(pcell_name='CIRCLE', lib_name='Basic', params={}) :
+
+    # Get PCell Library
+    lib = pya.Library.library_by_name(lib_name)
+    # The PCell Declaration. This one will create PCell variants.
+    pcell_decl = lib.layout().pcell_declaration(pcell_name)
+
+    layoutview = pya.LayoutView().current()
+
+    cellview = pya.CellView().active()
+    view     = cellview.view()
+    layout   = cellview.layout()
+
+    # Get the top cell. Assuming only one top cell exists
+    top_cell = layout.top_cell()
+
+    # Add a PCell variant
+    pcell_var = layout.add_pcell_variant(lib, pcell_decl.id(), params)
+    
+    print(layout.cell(pcell_var).bbox())
+    print(layout.cell(pcell_var).bbox().width() * 0.005)
+    print(layout.cell(pcell_var).bbox().height() * 0.005)
+    
+    width = layout.cell(pcell_var).bbox().width()
+    height = layout.cell(pcell_var).bbox().height()
+    
+    # Insert first instances
+    top_cell.insert(pya.CellInstArray(pcell_var,pya.Trans.R0))
+    # Insert and move the second instance (Move so we can see it)
+    top_cell.insert(pya.CellInstArray(pcell_var,pya.Trans(300,0)))
+    
+    for x in range(100):
+      for y in range(100):
+        top_cell.insert(pya.CellInstArray(pcell_var,pya.Trans(x*width,y*height)))
+
+params = {
+  'l' : 0.30,
+  'w' : 0.50,
+  'bulk' : 'bulk tie',
+  'DSASD' : 'ASD'
+}
+
+createPCellInstance('nfet', 'skywater130', params)
+
+# spacing
+# select library
+# default parameters...
+
+ </text>
+</klayout-macro>
