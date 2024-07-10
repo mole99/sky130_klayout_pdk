@@ -40,8 +40,8 @@ from sky130_pcells.PchvtPmos18 import pchvtPmos18Generator
 from sky130_pcells.PcnvtNmos33 import pcnvtNmos33Generator
 from sky130_pcells.PcnvtNmos5 import pcnvtNmos5Generator
 from sky130_pcells.PcNmos5d10 import pcNmos5d10Generator
-from sky130_pcells.nmos18 import NMOS18
-from sky130_pcells.pmos18 import PMOS18
+#from sky130_pcells.nmos18 import NMOS18
+#from sky130_pcells.pmos18 import PMOS18
 from sky130_pcells.polyres import PolyRes_gen
 from sky130_pcells.inductor import IndGenerator
 from sky130_pcells.rectangular_shielding import rectangular_shielding_Generator
@@ -50,7 +50,7 @@ from sky130_pcells.diff_square_inductor import diff_squar_ind_Generator
 from sky130_pcells.single_octagon_ind import single_octagon_ind_Generator
 from sky130_pcells.new_single_octagon_ind import new_single_octagon_Generator
 from sky130_pcells.diff_octagon import diff_octagon_ind_Generator
-from sky130_pcells.nmos5d10 import nmos5d10_gen
+#from sky130_pcells.nmos5d10 import nmos5d10_gen
 from sky130_pcells.pmos5d10 import pmos5d10_gen
 from sky130_pcells.mimcap_1 import mimcap_1_gen
 from sky130_pcells.mimcap_2 import mimcap_2_gen

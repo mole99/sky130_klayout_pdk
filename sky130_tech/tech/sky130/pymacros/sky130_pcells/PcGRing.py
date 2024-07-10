@@ -4,7 +4,6 @@
 from sky130_pcells.imported_generators.layers_definiations import *
 import pya
 import math
-import pandas as pd
 
 
 class pcGRingGenerator(pya.PCellDeclarationHelper):

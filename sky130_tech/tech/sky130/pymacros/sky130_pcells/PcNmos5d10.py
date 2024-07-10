@@ -8,7 +8,6 @@ from sky130_pcells.PcGRing import *
 import pya
 import math
 
-import pandas as pd
 
 class pcNmos5d10Generator(pya.PCellDeclarationHelper):
 

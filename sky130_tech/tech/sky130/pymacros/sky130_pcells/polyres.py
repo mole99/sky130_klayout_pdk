@@ -18,7 +18,7 @@
 ## Mabrains poly resistor 1.8V Generator for Skywaters 130nm
 ########################################################################################################################
 from typing import DefaultDict
-from pandas.core import series
+#from pandas.core import series
 import pya
 import math
 from .layers_definiations import *

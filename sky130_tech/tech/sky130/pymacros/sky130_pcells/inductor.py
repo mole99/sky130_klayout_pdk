@@ -20,7 +20,6 @@
 from .layers_definiations import *
 import pya
 import math
-import pandas as pd
 
 
 """
