@@ -12,10 +12,6 @@
 
 import pya
 import math
-from .imported_generators.mimcap import *
-
-
-
 
 class mimcap_1_gen(pya.PCellDeclarationHelper):
     """

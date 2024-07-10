@@ -1,9 +1,9 @@
 
 # Taher Kourany, 03.010.22 -- Initial version of MOS5d10 finger tran
 
-from sky130_pcells.imported_generators.layers_definiations import *
-from sky130_pcells.PcViaStack import *
-from sky130_pcells.PcMos18Finger import *
+from .layers_definiations import *
+from .PcViaStack import *
+from .PcMos18Finger import *
 import pya
 import math
 

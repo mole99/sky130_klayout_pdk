@@ -1,14 +1,13 @@
 # Taher Kourany, 02.10.22 -- Initial version of nmos5d10 pcell generator
 # Taher Kourany, 02.11.22 -- Guard ring contact & S/D contact coverage param (%)
 
-from sky130_pcells.imported_generators.layers_definiations import *
-from sky130_pcells.PcMos5d10Finger import *
-from sky130_pcells.PcGRing import *
+from .layers_definiations import *
+from .PcMos5d10Finger import *
+from .PcGRing import *
 
 import pya
 import math
 
-import pandas as pd
 
 class pcNmos5d10Generator(pya.PCellDeclarationHelper):
 

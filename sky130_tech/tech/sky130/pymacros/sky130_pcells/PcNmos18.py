@@ -1,8 +1,8 @@
 # Taher Kourany, 02.11.22 -- Initial version of nmos18 pcell generator (w,l,sab,gate_contact,gate_contact_num,finger_num,grCovmCON,sdCovmCON)
 
-from sky130_pcells.imported_generators.layers_definiations import *
-from sky130_pcells.PcMos18Finger import *
-from sky130_pcells.PcGRing import *
+from .layers_definiations import *
+from .PcMos18Finger import *
+from .PcGRing import *
 
 import pya
 import math

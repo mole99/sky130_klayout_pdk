@@ -29,31 +29,31 @@
 import pya
 
 # from .via import ViaGenerator
-from sky130_pcells.PcViaStack import pcViaStackGenerator
-from sky130_pcells.PcGRing import pcGRingGenerator
-from sky130_pcells.PcMos18Finger import pcMos18FingerGenerator
-from sky130_pcells.PclvtNmos18 import pclvtNmos18Generator
-from sky130_pcells.PclvtPmos18 import pclvtPmos18Generator
-from sky130_pcells.PcNmos18 import pcNmos18Generator
-from sky130_pcells.PcPmos18 import pcPmos18Generator
-from sky130_pcells.PchvtPmos18 import pchvtPmos18Generator
-from sky130_pcells.PcnvtNmos33 import pcnvtNmos33Generator
-from sky130_pcells.PcnvtNmos5 import pcnvtNmos5Generator
-from sky130_pcells.PcNmos5d10 import pcNmos5d10Generator
-from sky130_pcells.polyres import PolyRes_gen
-from sky130_pcells.inductor import IndGenerator
-from sky130_pcells.rectangular_shielding import rectangular_shielding_Generator
-from sky130_pcells.triangular_shielding import triangular_shielding_Generator
-from sky130_pcells.diff_square_inductor import diff_squar_ind_Generator
-from sky130_pcells.single_octagon_ind import single_octagon_ind_Generator
-from sky130_pcells.new_single_octagon_ind import new_single_octagon_Generator
-from sky130_pcells.diff_octagon import diff_octagon_ind_Generator
-from sky130_pcells.mimcap_1 import mimcap_1_gen
-from sky130_pcells.mimcap_2 import mimcap_2_gen
-from sky130_pcells.pnp_gen import pnp_bjt
+from .PcViaStack import pcViaStackGenerator
+from .PcGRing import pcGRingGenerator
+from .PcMos18Finger import pcMos18FingerGenerator
+from .PclvtNmos18 import pclvtNmos18Generator
+from .PclvtPmos18 import pclvtPmos18Generator
+from .PcNmos18 import pcNmos18Generator
+from .PcPmos18 import pcPmos18Generator
+from .PchvtPmos18 import pchvtPmos18Generator
+from .PcnvtNmos33 import pcnvtNmos33Generator
+from .PcnvtNmos5 import pcnvtNmos5Generator
+from .PcNmos5d10 import pcNmos5d10Generator
+from .polyres import PolyRes_gen
+from .inductor import IndGenerator
+from .rectangular_shielding import rectangular_shielding_Generator
+from .triangular_shielding import triangular_shielding_Generator
+from .diff_square_inductor import diff_squar_ind_Generator
+from .single_octagon_ind import single_octagon_ind_Generator
+from .new_single_octagon_ind import new_single_octagon_Generator
+from .diff_octagon import diff_octagon_ind_Generator
+from .mimcap_1 import mimcap_1_gen
+from .mimcap_2 import mimcap_2_gen
+from .pnp_gen import pnp_bjt
 
 
-from sky130_pcells.layers_definiations import *
+from .layers_definiations import *
 
 class Sky130(pya.Library):
     """

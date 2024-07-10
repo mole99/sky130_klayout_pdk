@@ -17,10 +17,9 @@
 ## Mabrains Via Generator for Skywaters 130nm
 ########################################################################################################################
 
-from sky130_pcells.imported_generators.layers_definiations import *
+from .layers_definiations import *
 import pya
 import math
-import pandas as pd
 
 
 """

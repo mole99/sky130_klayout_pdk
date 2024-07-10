@@ -17,7 +17,6 @@
 
 import pya
 import math
-from .imported_generators.pnp import *
 
 """
 This sample PCell implements a library called "MyLib" with a single PCell that

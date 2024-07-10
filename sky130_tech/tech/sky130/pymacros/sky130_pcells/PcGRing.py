@@ -1,10 +1,9 @@
 
 # Taher Kourany, 05.08.22 -- Initial version of guard rings
 
-from sky130_pcells.imported_generators.layers_definiations import *
+from .layers_definiations import *
 import pya
 import math
-import pandas as pd
 
 
 class pcGRingGenerator(pya.PCellDeclarationHelper):

@@ -3,8 +3,8 @@
 # Taher Kourany, 26.08.22 -- sab param, adpatation of pcViaStack fn tran param (to stay in micrometer world)
 # Taher Kourany, 27.08.22 -- multi-finger purpose.
 
-from sky130_pcells.imported_generators.layers_definiations import *
-from sky130_pcells.PcViaStack import *
+from .layers_definiations import *
+from .PcViaStack import *
 import pya
 import math
 
